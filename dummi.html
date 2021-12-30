@@ -1,0 +1,21 @@
+$("#submit-form").submit((e) => {
+    e.preventDefault();
+
+    if (shahin == 6) {
+         $.ajax({
+              url: "https://script.google.com/macros/s/AKfycbwo85P_DLOeZ_CzVsuBHnJ0gMYxsIcQ_WXpsg3cSDCjyrw8H8WbKClsqTFd68Vxpen1/exec",
+              data: $("#submit-form").serialize(),
+              method: "post",
+              success: function (response) {
+                   alert("Form submitted successfully");
+                   window.location.reload();
+                   //window.location.href="https://google.com"
+              },
+              error: function (err) {
+                   alert("Something Error");
+              },
+         });
+    }
+});
+
+
